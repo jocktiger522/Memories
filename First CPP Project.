@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+using namespace std;
+int main()
+{
+	string mystr;
+	string name;
+	string food;
+	float price = 0;
+	int quantity = 0;
+	int i;
+	cout << "Hi! What's your name? ";
+	getline(cin, name);
+	cout << "Hello " << name << ".\n";
+	cout << " What's your favorite food? ";
+	getline(cin, food);
+	cout << "Wow! What a coincidence! I like " << food << " too!\n";
+	cout << "Okay, We're getting a bit carried away! We have to move on " << name << "! Okay, we will get started now.\n ";
+	cout << "Please enter the price of the item: ";
+	getline(cin, mystr);
+	stringstream(mystr) >> price;
+	cout << "How many items are there: ";
+	getline(cin, mystr);
+	stringstream(mystr) >> quantity;
+	cout << "Here is your total price " << name <<" :/n" << price*quantity << " Have a good day!" endl;
+	return 0;
+	
+}
